@@ -5,7 +5,7 @@
         @include('layouts.sidebar')
 
         <!-- content -->
-        <div class="container bg-gray-300" id="main-content" style="padding:20px;">
+        <div class="container bg-gray-300 overflow-x-auto" id="main-content" style="padding:20px;">
         </div>
 
     </div>

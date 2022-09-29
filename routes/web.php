@@ -19,16 +19,21 @@ Route::redirect('/', 'login');
 
 Route::get('/dashboard', [ClinicController::class, 'show'], function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth', 'prevent-back-history'])->name('dashboard');
+
+Route::middleware(['auth', 'prevent-back-history'])->group(function () {
+
+    Route::get('/clinics', [ClinicController::class, 'show'])->name('clinics');
+
+    Route::get('/add-clinic', [ClinicController::class, 'index']);
+
+    Route::get('/welcome', function () {
+        return view('welcome');
+    });
+});
 
 require __DIR__ . '/auth.php';
 
-Route::get('/clinics', [ClinicController::class, 'show'])->middleware(['auth'])->name('clinics');
 
-Route::get('/add-clinic', [ClinicController::class, 'index'])->middleware(['auth']);
-
-Route::get('/welcome', function () {
-    return view('welcome');
-})->middleware(['auth']);
 
 // Route::get('/clinic/{id}',)

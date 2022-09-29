@@ -9,7 +9,7 @@
 
     <!-- add new clinic button -->
     <div class="container p-2 border-t-2 border-gray text-center">
-        <button class="h-8 font-semibold rounded-md bg-cyan-500 hover:bg-cyan-700 text-white" id="addClinic-btn">
+        <button class="h-8 font-semibold rounded-md bg-purple-600 hover:bg-purple-800 text-white" id="addClinic-btn">
             <a class="block px-5">ADD NEW CLINIC <i class="fa-regular fa-square-plus"></i></a>
         </button>
     </div>
