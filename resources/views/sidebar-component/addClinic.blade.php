@@ -1,7 +1,7 @@
 @vite('resources/css/app.css')
 <div class="container p-3 font-sans">
     <header class="text-xl" style="letter-spacing:3px;"><strong>ADD NEW CLINIC</strong> <i class="fa-solid fa-hospital"></i></header>
-    <form action="" method="post" class="flex flex-col pt-8" style="width:400px;">
+    <form action="" method="post" class="flex flex-col pt-10 m-auto" style="width:400px;">
         @csrf
         <label for="clinicName" class="p-2 tracking-wide" style="letter-spacing:2px;"><strong>Clinic name</strong></label>
         <input type="text" name="clinicName" id="clinicName" class="rounded-md hover:bg-gray-100 active:bg-gray-300 focus:bg-white">
