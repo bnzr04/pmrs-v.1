@@ -20,14 +20,14 @@
             <div class="mt-4">
                 <x-input-label for="username" :value="__('USERNAME')" style="letter-spacing: 3px;" />
 
-                <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
+                <x-text-input id="username" class="block mt-1 w-full hover:bg-gray-200 focus:bg-white" type="text" name="username" :value="old('username')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-input-label for="password" :value="__('PASSWORD')" style="letter-spacing: 3px;" />
 
-                <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-text-input id="password" class="block mt-1 w-full hover:bg-gray-200 focus:bg-white" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -45,7 +45,7 @@
                 </a>
                 @endif -->
 
-                <x-primary-button class="ml-4">
+                <x-primary-button class="ml-4 bg-purple-500 hover:bg-purple-700">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>

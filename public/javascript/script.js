@@ -2,9 +2,34 @@ $(document).ready(function(){
     //initiation page
     $('#main-content').load('/welcome');
 
-    $('#addClinic-btn').click(function(){
-        $('#main-content').load('/add-clinic');
-        return false;
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     });
 
+    $('#clinic-form').on('submit', function(e){
+        e.preventDefault();
+
+        var form = $(this).serialize();
+        var url = $(this).attr('action');
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: form,
+            dataType: 'json',
+            success:function(){
+                $('#clinicModal').modal('hide');
+                $('#clinic-form')[0].reset();
+            }
+        })
+    });
+
+    $('#clinic-btn').click(function(e){
+
+        e.preventDefault();
+
+        $('#main-content').load('/show/');
+    });
 });

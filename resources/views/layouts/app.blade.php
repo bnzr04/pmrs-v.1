@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="{{url('css/style.css')}}">
     <link rel="stylesheet" href="{{url('fontawesome-free-6.2.0-web/css/all.min.css')}}">
     <link rel="stylesheet" href="{{url('fontawesome-free-6.2.0-web/css/all.css')}}">
+    <link rel="stylesheet" href="{{url('bootstrap-5.0.2-dist/css/bootstrap.min.css')}}">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 </head>
 
@@ -33,6 +36,7 @@
     </div>
     <script src="{{url('javascript/jquery-3.6.1.min.js')}}"></script>
     <script src="{{url('javascript/script.js')}}"></script>
+    <script src="{{url('bootstrap-5.0.2-dist/js/bootstrap.min.js')}}"></script>
 </body>
 
 </html>

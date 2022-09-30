@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <div class="container-fluid flex relative h-full">
+    <div class="container-fluid flex relative h-full p-0">
 
         @include('layouts.sidebar')
 
