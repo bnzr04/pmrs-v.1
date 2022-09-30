@@ -25,11 +25,4 @@ $(document).ready(function(){
             }
         })
     });
-
-    $('#clinic-btn').click(function(e){
-
-        e.preventDefault();
-
-        $('#main-content').load('/show/');
-    });
 });

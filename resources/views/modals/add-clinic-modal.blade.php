@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <header class="text-xl modal-title" style="letter-spacing:3px;"><strong>Add new clinic</strong> <i class="fa-solid fa-hospital"></i></header>
-                <button type="button" class="border-1 rounded-md border-gray-300 px-3 py-2 shadow-md hover:shadow-sm" data-bs-dismiss="modal" aria-label="Close">X</button>
+                <button type="button" class="border-1 rounded-md border-gray-300 px-3 py-2 shadow-md hover:shadow-sm active:bg-gray-100" data-bs-dismiss="modal" aria-label="Close">X</button>
             </div>
             <div class="modal-body">
                 <form action="{{ URL::to('new-clinic') }}" class="flex flex-col gap-2" id="clinic-form">

@@ -9,11 +9,11 @@
 
     <!-- add new clinic button -->
     <div class="container p-2 border-t-2 border-gray text-center">
-        <button type="button" class="h-8 font-semibold rounded-md bg-purple-600 hover:bg-purple-800 text-white" id="addClinic-btn" data-bs-toggle="modal" data-bs-target="#clinicModal">
+        <button type="button" class="h-8 font-semibold rounded-md bg-purple-600 hover:bg-purple-800 text-white" data-bs-toggle="modal" data-bs-target="#clinicModal">
             <a class="block px-2 hover:text-white">Add new clinic <i class="fa-regular fa-square-plus relative left-1 p-1"></i></a>
         </button>
-    </div>
 
+    </div>
     @include('modals.add-clinic-modal')
 
     <strong class="p-2 text-white text-lg" style="letter-spacing: 3px">Clinics <i class="fa-solid fa-hospital"></i></strong>
