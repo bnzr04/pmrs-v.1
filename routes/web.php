@@ -23,17 +23,21 @@ Route::get('/dashboard', [ClinicController::class, 'show'], function () {
 
 Route::middleware(['auth', 'prevent-back-history'])->group(function () {
 
-    Route::get('/clinics', [ClinicController::class, 'show'])->name('clinics');
-
     Route::get('/add-clinic', [ClinicController::class, 'index']);
 
     Route::get('/welcome', function () {
         return view('welcome');
     });
+
+    Route::get('/tests', function () {
+        return view('test');
+    });
+
+    Route::get('/show-clinic', function () {
+        return view('content.show-clinic');
+    });
+
+    Route::get('/show-clinic/{id}', [ClinicController::class, 'showClinic'])->name('clinic.show');
 });
 
 require __DIR__ . '/auth.php';
-
-
-
-// Route::get('/clinic/{id}',)

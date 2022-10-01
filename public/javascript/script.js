@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //initiation page
-    $('#main-content').load('/welcome');
+    // $('#main-content').load('welcome')
 
     $.ajaxSetup({
         headers: {
@@ -24,5 +24,29 @@ $(document).ready(function(){
                 $('#clinic-form')[0].reset();
             }
         })
+    });
+
+    $('ul#clinics-container a#clinic-btn').click(function(e) {
+        e.preventDefault();
+        $("#main-content").load('/show-clinic');
+        
+        var url = $(this).data('url');
+
+        $.get(url, function(data){
+            
+            var id = data[0].clinic_id;
+            var name = data[0].clinic_name;
+            var description = data[0].description;
+            
+            
+            
+            $("#clinic-id").text(id);
+            $("#clinic-name").text(name);
+            $("#clinic-desc").text(description);
+
+            
+        })
+        
+
     });
 });

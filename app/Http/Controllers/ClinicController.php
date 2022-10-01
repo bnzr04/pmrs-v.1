@@ -18,4 +18,11 @@ class ClinicController extends Controller
 
         return view('dashboard', ['clinics' => $data]);
     }
+
+    public function showClinic($id)
+    {
+        $data = Clinics::where('clinic_id', $id)->get();
+
+        return response()->json($data);
+    }
 }

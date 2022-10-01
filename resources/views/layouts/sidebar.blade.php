@@ -15,15 +15,16 @@
 
     </div>
     @include('modals.add-clinic-modal')
+    @include('modals.edit-clinic-modal')
 
     <strong class="p-2 text-white text-lg" style="letter-spacing: 3px">Clinics <i class="fa-solid fa-hospital"></i></strong>
 
     <!-- clinics-button -->
     <div class="container clinic-btn-container leading-9 border-gray-500 border-b-2 px-0" style="height:47vh;overflow-y:auto">
 
-        <ul>
+        <ul id="clinics-container">
             @foreach($clinics as $clinic)
-            <li class="text-white border-white border-2 rounded-md m-1 hover:bg-slate-500"><a href="/clinic/id={{$clinic->clinic_id}}" class="block p-2 hover:text-white" id="clinic-btn">{{ $clinic->clinic_name }}</a></li>
+            <li class="text-white border-white border-2 rounded-md m-1 hover:bg-slate-500"><a href="javascript:void(0)" data-url="{{ route('clinic.show', $clinic->clinic_id) }}" class="block p-2 hover:text-white" id="clinic-btn">{{ $clinic->clinic_name }}</a></li>
             @endforeach
         </ul>
     </div>
