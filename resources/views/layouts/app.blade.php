@@ -24,7 +24,7 @@
 
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased h-screen">
     <div class="flex flex-col" style="height:100vh;">
         @include('layouts.navigation')
 

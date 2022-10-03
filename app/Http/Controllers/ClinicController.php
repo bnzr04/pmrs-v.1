@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Clinics;
+use App\Models\Patients;
 
 class ClinicController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        dd($request);
         return view('sidebar-component.addClinic');
     }
 
@@ -22,7 +24,8 @@ class ClinicController extends Controller
     public function showClinic($id)
     {
         $data = Clinics::where('clinic_id', $id)->get();
+        $data2 = Patients::where('clinic_id', $id)->get();
 
-        return response()->json($data);
+        return response()->json([$data, $data2]);
     }
 }

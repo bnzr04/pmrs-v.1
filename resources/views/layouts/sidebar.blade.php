@@ -9,8 +9,8 @@
 
     <!-- add new clinic button -->
     <div class="container p-2 border-t-2 border-gray text-center">
-        <button type="button" class="h-8 font-semibold rounded-md bg-purple-600 hover:bg-purple-800 text-white" data-bs-toggle="modal" data-bs-target="#clinicModal">
-            <a class="block px-2 hover:text-white">Add new clinic <i class="fa-regular fa-square-plus relative left-1 p-1"></i></a>
+        <button type="button" class="py-1 h-8 font-semibold rounded-md bg-purple-600 hover:bg-purple-800 text-white" data-bs-toggle="modal" data-bs-target="#clinicModal">
+            <a class="block px-2 hover:text-white">Add clinic <i class="fa-regular fa-square-plus relative left-1 p-1"></i></a>
         </button>
 
     </div>
@@ -24,7 +24,7 @@
 
         <ul id="clinics-container">
             @foreach($clinics as $clinic)
-            <li class="text-white border-white border-2 rounded-md m-1 hover:bg-slate-500"><a href="javascript:void(0)" data-url="{{ route('clinic.show', $clinic->clinic_id) }}" class="block p-2 hover:text-white" id="clinic-btn">{{ $clinic->clinic_name }}</a></li>
+            <li class="text-white border-white border-2 rounded-md m-1 hover:bg-slate-500"><a href="javascript:void(0)" data-url="{{ route('patient.show', $clinic->clinic_id) }}" class="block p-2 hover:text-white" id="clinic-btn">{{ $clinic->clinic_name }}</a></li>
             @endforeach
         </ul>
     </div>

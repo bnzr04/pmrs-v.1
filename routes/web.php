@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClinicController;
+use App\Http\Controllers\PatientController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -33,11 +34,11 @@ Route::middleware(['auth', 'prevent-back-history'])->group(function () {
         return view('test');
     });
 
-    Route::get('/show-clinic', function () {
-        return view('content.show-clinic');
+    Route::get('/patients', function () {
+        return view('content.show-patients');
     });
 
-    Route::get('/show-clinic/{id}', [ClinicController::class, 'showClinic'])->name('clinic.show');
+    Route::get('/patients/{id}', [PatientController::class, 'showPatient'])->name('patient.show');
 });
 
 require __DIR__ . '/auth.php';
